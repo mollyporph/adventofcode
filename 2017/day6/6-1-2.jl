@@ -17,7 +17,7 @@ end
 println(length(state))
 
 #part 2
-println(abs(reduce(-, find(x -> x == state[end], state))))
+println(length(state) - findfirst(x -> x == state[end], state))
 
 
 
@@ -31,5 +31,5 @@ println(abs(reduce(-, find(x -> x == state[end], state))))
 # then we add our inc-array to our inputArr (julia does by-index addition for n-dim vectors)
 # then we push the current state to the state-array for duplicate checking on next cycle
 #part 2
-# find all the indexes matching the last value in our state array, reduce them with subtraction and take the abs value (1 - 5 -> 4)
+# take the length of the state array and subtract the index of the first duplicate
 
